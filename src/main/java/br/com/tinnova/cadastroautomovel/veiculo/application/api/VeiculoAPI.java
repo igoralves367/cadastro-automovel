@@ -15,4 +15,4 @@ public interface VeiculoAPI {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	VeiculoResponse postVeiculo(@Valid @RequestBody VeiculoRequest veiculoRequeste);
-}
+} 
