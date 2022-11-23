@@ -1,5 +1,11 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 
-public class VeiculoRequest {
+import lombok.Value;
 
+@Value
+public class VeiculoRequest {
+	private String veiculo;
+	private String marca;
+	private Integer ano;
+	private Boolean vendido;
 }

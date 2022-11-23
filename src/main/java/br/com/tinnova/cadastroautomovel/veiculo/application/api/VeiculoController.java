@@ -20,5 +20,4 @@ public class VeiculoController implements VeiculoAPI {
 		log.info("[finaliza] VeiculoController - postVeiculo");
 		return veiculoCriado;
 	}
-
 }
