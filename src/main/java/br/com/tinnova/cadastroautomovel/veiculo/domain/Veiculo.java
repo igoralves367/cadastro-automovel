@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.websocket.Decoder.Text;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -25,7 +24,7 @@ public class Veiculo {
 	private String veiculo;
 	private String marca;
 	private Integer ano;
-	private Text descricao; //text ?
+	//private Text descricao; //text ?
 	private Boolean vendido;
 	
 	private LocalDateTime created;
