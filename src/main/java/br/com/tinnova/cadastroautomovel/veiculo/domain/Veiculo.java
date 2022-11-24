@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import lombok.AccessLevel;
@@ -23,10 +25,14 @@ public class Veiculo {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(columnDefinition = "uuid", name = "id", updatable = false, unique = true, nullable = false)
 	private UUID idVeiculo;
+	@NotBlank
 	private String veiculo;
+	@NotBlank
 	private String marca;
+	@NotNull
 	private Integer ano;
 	private String descricao;
+	@NotNull
 	private Boolean vendido;
 	
 	private LocalDateTime created;
