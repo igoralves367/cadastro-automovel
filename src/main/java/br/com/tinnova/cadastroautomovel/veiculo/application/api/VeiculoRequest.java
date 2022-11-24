@@ -7,5 +7,6 @@ public class VeiculoRequest {
 	private String veiculo;
 	private String marca;
 	private Integer ano;
+	private String descricao;
 	private Boolean vendido;
 }

@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.Valid;
 
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import lombok.AccessLevel;
@@ -27,17 +26,18 @@ public class Veiculo {
 	private String veiculo;
 	private String marca;
 	private Integer ano;
-	//private Text descricao; //text ?
+	private String descricao;
 	private Boolean vendido;
 	
 	private LocalDateTime created;
 	private LocalDateTime updated;
 	
-	public Veiculo(@Valid VeiculoRequest veiculoRequeste) {
-		this.veiculo = veiculoRequeste.getVeiculo();
-		this.marca = veiculoRequeste.getMarca();
-		this.ano = veiculoRequeste.getAno();
-		this.vendido = veiculoRequeste.getVendido();
+	public Veiculo(VeiculoRequest veiculoRequest) {
+		this.veiculo = veiculoRequest.getVeiculo();
+		this.marca = veiculoRequest.getMarca();
+		this.ano = veiculoRequest.getAno();
+		this.descricao = veiculoRequest.getDescricao();
+		this.vendido = veiculoRequest.getVendido();
 		this.created = LocalDateTime.now();
 		this.updated = LocalDateTime.now();
 	}	

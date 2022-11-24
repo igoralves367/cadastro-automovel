@@ -14,9 +14,9 @@ public class VeiculoController implements VeiculoAPI {
 	private final  VeiculoService veiculoService;
 
 	@Override
-	public VeiculoResponse postVeiculo(@Valid VeiculoRequest veiculoRequeste) {
+	public VeiculoResponse postVeiculo(@Valid VeiculoRequest veiculoRequest) {
 		log.info("[inicia] VeiculoController - postVeiculo");
-		VeiculoResponse veiculoCriado = veiculoService.criaVeiculo(veiculoRequeste);
+		VeiculoResponse veiculoCriado = veiculoService.criaVeiculo(veiculoRequest);
 		log.info("[finaliza] VeiculoController - postVeiculo");
 		return veiculoCriado;
 	}

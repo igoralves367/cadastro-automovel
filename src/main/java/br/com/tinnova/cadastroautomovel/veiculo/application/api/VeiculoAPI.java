@@ -14,5 +14,5 @@ import org.springframework.web.bind.annotation.RestController;
 public interface VeiculoAPI {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
-	VeiculoResponse postVeiculo(@Valid @RequestBody VeiculoRequest veiculoRequeste);
+	VeiculoResponse postVeiculo(@Valid @RequestBody VeiculoRequest veiculoRequest);
 } 
