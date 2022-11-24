@@ -11,6 +11,8 @@ public class VeiculoRequest {
 	private String veiculo;
 	@NotBlank
 	private String marca;
+	@NotBlank
+	private String cor;
 	@NotNull
 	private Integer ano;
 	private String descricao;

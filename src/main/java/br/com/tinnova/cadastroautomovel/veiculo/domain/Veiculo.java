@@ -29,6 +29,8 @@ public class Veiculo {
 	private String veiculo;
 	@NotBlank
 	private String marca;
+	@NotBlank
+	private String cor;
 	@NotNull
 	private Integer ano;
 	private String descricao;
@@ -41,6 +43,7 @@ public class Veiculo {
 	public Veiculo(VeiculoRequest veiculoRequest) {
 		this.veiculo = veiculoRequest.getVeiculo();
 		this.marca = veiculoRequest.getMarca();
+		this.cor = veiculoRequest.getCor();
 		this.ano = veiculoRequest.getAno();
 		this.descricao = veiculoRequest.getDescricao();
 		this.vendido = veiculoRequest.getVendido();
