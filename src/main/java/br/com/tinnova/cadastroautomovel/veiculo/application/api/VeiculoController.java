@@ -45,6 +45,7 @@ public class VeiculoController implements VeiculoAPI {
 	public void deletaVeiculoAtravesId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoController - deletaVeiculoAtravesId");
 		log.info("{idVeiculo} {}", idVeiculo);
+		veiculoService.deletaVeiculoAtravesId(idVeiculo);
 		log.info("[finaliza] VeiculoController - deletaVeiculoAtravesId");		
 	}
 }
