@@ -1,6 +1,7 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.validation.Valid;
 
@@ -29,5 +30,13 @@ public class VeiculoController implements VeiculoAPI {
 		List<VeiculoListResponse> veiculo = veiculoService.buscaTodosVeiculos();
 		log.info("[finaliza] VeiculoController - getTodosVeiculos");
 		return veiculo;
+	}
+
+	@Override
+	public VeiculoDetalhadoResponse getVeiculoAtravesId(UUID idVeiculos) {
+		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
+		log.info("{idVeiculo} {}", idVeiculos);
+		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
+		return null;
 	}
 }
