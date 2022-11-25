@@ -10,5 +10,4 @@ public interface VeiculoRepository {
 	List<Veiculo> buscaTodosVeiculos();
 	Veiculo buscaVeiculoAtravesId(UUID idVeiculo);
 	void deletaVeiculo(Veiculo veiculo);
-
 }

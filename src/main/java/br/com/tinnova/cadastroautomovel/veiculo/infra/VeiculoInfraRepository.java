@@ -45,9 +45,7 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	@Override
 	public void deletaVeiculo(Veiculo veiculo) {
 		log.info("[inicia] VeiculoInfraRepository - deletaVeiculo");
-		
-		log.info("[finaliza] VeiculoInfraRepository - deletaVeiculo");
-		
+		veiculoSpringDataJPARepository.delete(veiculo);
+		log.info("[finaliza] VeiculoInfraRepository - deletaVeiculo");		
 	}
-
 }
