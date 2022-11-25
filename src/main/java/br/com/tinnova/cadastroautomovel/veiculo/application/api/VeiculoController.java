@@ -26,7 +26,8 @@ public class VeiculoController implements VeiculoAPI {
 	@Override
 	public List<VeiculoListResponse> getTodosVeiculos() {
 		log.info("[inicia] VeiculoController - getTodosVeiculos");
+		List<VeiculoListResponse> veiculo = veiculoService.buscaTodosVeiculos();
 		log.info("[finaliza] VeiculoController - getTodosVeiculos");
-		return null;
+		return veiculo;
 	}
 }

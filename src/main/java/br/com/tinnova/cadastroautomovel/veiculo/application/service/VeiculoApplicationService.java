@@ -1,9 +1,12 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.service;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.repository.VeiculoRepository;
@@ -25,5 +28,12 @@ public class VeiculoApplicationService implements VeiculoService {
 		return VeiculoResponse.builder()
 				.idVeiculo(veiculo.getIdVeiculo())
 				.build();
+	}
+
+	@Override
+	public List<VeiculoListResponse> buscaTodosVeiculos() {
+		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
+		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
+		return null;
 	}
 }
