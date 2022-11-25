@@ -38,8 +38,16 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
 		Veiculo veiculo = veiculoSpringDataJPARepository.findById(idVeiculo)
 				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrato"));
-		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
+		log.info("[finaliza] VeiculoInfraRepository - buscaVeiculoAtravesId");
 		return veiculo;
+	}
+
+	@Override
+	public void deletaVeiculo(Veiculo veiculo) {
+		log.info("[inicia] VeiculoInfraRepository - deletaVeiculo");
+		
+		log.info("[finaliza] VeiculoInfraRepository - deletaVeiculo");
+		
 	}
 
 }

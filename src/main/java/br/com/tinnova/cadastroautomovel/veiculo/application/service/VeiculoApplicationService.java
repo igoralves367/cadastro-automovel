@@ -51,7 +51,8 @@ public class VeiculoApplicationService implements VeiculoService {
 	@Override
 	public void deletaVeiculoAtravesId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoApplicationService - deletaVeiculoAtravesId");
-		log.info("[finaliza] VeiculoApplicationService - deletaVeiculoAtravesId");
-		
+		Veiculo veiculo = veiculoRepository.buscaVeiculoAtravesId(idVeiculo);
+		veiculoRepository.deletaVeiculo(veiculo);
+		log.info("[finaliza] VeiculoApplicationService - deletaVeiculoAtravesId");		
 	}
 }
