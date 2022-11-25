@@ -1,11 +1,13 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoDetalhadoResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoResponse;
@@ -34,7 +36,14 @@ public class VeiculoApplicationService implements VeiculoService {
 	public List<VeiculoListResponse> buscaTodosVeiculos() {
 		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
 		List<Veiculo> veiculo = veiculoRepository.buscaTodosVeiculos();
-		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
+		log.info("[finaliza] VeiculoApplicationService - buscaTodosVeiculos");
 		return VeiculoListResponse.converte(veiculo);
+	}
+
+	@Override
+	public VeiculoDetalhadoResponse buscaVeiculoAtravesId(UUID idVeiculos) {
+		log.info("[inicia] VeiculoApplicationService - buscaVeiculoAtravesId");
+		log.info("[finaliza] VeiculoApplicationService - buscaVeiculoAtravesId");
+		return null;
 	}
 }

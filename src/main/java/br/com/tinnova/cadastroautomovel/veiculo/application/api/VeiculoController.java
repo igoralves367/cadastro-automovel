@@ -36,7 +36,8 @@ public class VeiculoController implements VeiculoAPI {
 	public VeiculoDetalhadoResponse getVeiculoAtravesId(UUID idVeiculos) {
 		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
 		log.info("{idVeiculo} {}", idVeiculos);
+		VeiculoDetalhadoResponse veiculoDetalhado = veiculoService.buscaVeiculoAtravesId(idVeiculos);
 		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
-		return null;
+		return veiculoDetalhado;
 	}
 }
