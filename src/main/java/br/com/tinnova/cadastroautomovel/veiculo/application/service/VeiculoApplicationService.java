@@ -43,7 +43,8 @@ public class VeiculoApplicationService implements VeiculoService {
 	@Override
 	public VeiculoDetalhadoResponse buscaVeiculoAtravesId(UUID idVeiculos) {
 		log.info("[inicia] VeiculoApplicationService - buscaVeiculoAtravesId");
+		Veiculo veiculo = veiculoRepository.buscaVeiculoAtravesId(idVeiculos);
 		log.info("[finaliza] VeiculoApplicationService - buscaVeiculoAtravesId");
-		return null;
+		return new VeiculoDetalhadoResponse(veiculo);
 	}
 }

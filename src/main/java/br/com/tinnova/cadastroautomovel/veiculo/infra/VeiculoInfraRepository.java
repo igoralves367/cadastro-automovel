@@ -1,6 +1,7 @@
 package br.com.tinnova.cadastroautomovel.veiculo.infra;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
 
@@ -26,8 +27,15 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	public List<Veiculo> buscaTodosVeiculos() {
 		log.info("[inicia] VeiculoInfraRepository - buscaTodosVeiculos");
 		List<Veiculo> todosVeiculos = veiculoSpringDataJPARepository.findAll();
-		log.info("[inicia] VeiculoInfraRepository - buscaTodosVeiculos");
+		log.info("[finaliza] VeiculoInfraRepository - buscaTodosVeiculos");
 		return todosVeiculos;
+	}
+
+	@Override
+	public Veiculo buscaVeiculoAtravesId(UUID idVeiculos) {
+		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
+		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
+		return null;
 	}
 
 }
