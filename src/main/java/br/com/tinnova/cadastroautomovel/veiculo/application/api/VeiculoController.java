@@ -1,5 +1,7 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -19,5 +21,12 @@ public class VeiculoController implements VeiculoAPI {
 		VeiculoResponse veiculoCriado = veiculoService.criaVeiculo(veiculoRequest);
 		log.info("[finaliza] VeiculoController - postVeiculo");
 		return veiculoCriado;
+	}
+
+	@Override
+	public List<VeiculoListResponse> getTodosVeiculos() {
+		log.info("[inicia] VeiculoController - getTodosVeiculos");
+		log.info("[finaliza] VeiculoController - getTodosVeiculos");
+		return null;
 	}
 }
