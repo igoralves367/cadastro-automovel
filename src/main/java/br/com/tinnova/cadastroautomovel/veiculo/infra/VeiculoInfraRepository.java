@@ -1,5 +1,7 @@
 package br.com.tinnova.cadastroautomovel.veiculo.infra;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import br.com.tinnova.cadastroautomovel.veiculo.application.repository.VeiculoRepository;
@@ -18,6 +20,13 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 		veiculoSpringDataJPARepository.save(veiculo);
 		log.info("[finaliza] VeiculoInfraRepository - salva");
 		return veiculo;
+	}
+
+	@Override
+	public List<Veiculo> buscaTodosVeiculos() {
+		log.info("[inicia] VeiculoInfraRepository - buscaTodosVeiculos");
+		log.info("[inicia] VeiculoInfraRepository - buscaTodosVeiculos");
+		return null;
 	}
 
 }

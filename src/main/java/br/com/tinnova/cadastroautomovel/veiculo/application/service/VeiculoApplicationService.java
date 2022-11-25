@@ -33,7 +33,8 @@ public class VeiculoApplicationService implements VeiculoService {
 	@Override
 	public List<VeiculoListResponse> buscaTodosVeiculos() {
 		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
+		List<Veiculo> veiculo = veiculoRepository.buscaTodosVeiculos();
 		log.info("[inicia] VeiculoApplicationService - buscaTodosVeiculos");
-		return null;
+		return VeiculoListResponse.converte(veiculo);
 	}
 }
