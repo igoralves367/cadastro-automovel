@@ -3,8 +3,10 @@ package br.com.tinnova.cadastroautomovel.veiculo.infra;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
+import br.com.tinnova.cadastroautomovel.handler.APIException;
 import br.com.tinnova.cadastroautomovel.veiculo.application.repository.VeiculoRepository;
 import br.com.tinnova.cadastroautomovel.veiculo.domain.Veiculo;
 import lombok.RequiredArgsConstructor;
@@ -35,7 +37,7 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	public Veiculo buscaVeiculoAtravesId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
 		Veiculo veiculo = veiculoSpringDataJPARepository.findById(idVeiculo)
-				.orElseThrow(() -> new RuntimeException("Veiculo não encontrato)"));
+				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrato"));
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
 		return veiculo;
 	}
