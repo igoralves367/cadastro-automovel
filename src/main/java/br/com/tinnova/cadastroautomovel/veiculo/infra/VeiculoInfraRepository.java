@@ -32,10 +32,12 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	}
 
 	@Override
-	public Veiculo buscaVeiculoAtravesId(UUID idVeiculos) {
+	public Veiculo buscaVeiculoAtravesId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
+		Veiculo veiculo = veiculoSpringDataJPARepository.findById(idVeiculo)
+				.orElseThrow(() -> new RuntimeException("Veiculo não encontrato)"));
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoAtravesId");
-		return null;
+		return veiculo;
 	}
 
 }

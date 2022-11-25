@@ -13,5 +13,5 @@ import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoResponse;
 public interface VeiculoService {
 	VeiculoResponse criaVeiculo(@Valid VeiculoRequest veiculoRequeste);
 	List<VeiculoListResponse> buscaTodosVeiculos();
-	VeiculoDetalhadoResponse buscaVeiculoAtravesId(UUID idVeiculos);
+	VeiculoDetalhadoResponse buscaVeiculoAtravesId(UUID idVeiculo);
 }

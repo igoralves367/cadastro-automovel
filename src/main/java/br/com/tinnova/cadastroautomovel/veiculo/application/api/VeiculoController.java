@@ -33,10 +33,10 @@ public class VeiculoController implements VeiculoAPI {
 	}
 
 	@Override
-	public VeiculoDetalhadoResponse getVeiculoAtravesId(UUID idVeiculos) {
+	public VeiculoDetalhadoResponse getVeiculoAtravesId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
-		log.info("{idVeiculo} {}", idVeiculos);
-		VeiculoDetalhadoResponse veiculoDetalhado = veiculoService.buscaVeiculoAtravesId(idVeiculos);
+		log.info("{idVeiculo} {}", idVeiculo);
+		VeiculoDetalhadoResponse veiculoDetalhado = veiculoService.buscaVeiculoAtravesId(idVeiculo);
 		log.info("[inicia] VeiculoController - getVeiculoAtravesId");
 		return veiculoDetalhado;
 	}

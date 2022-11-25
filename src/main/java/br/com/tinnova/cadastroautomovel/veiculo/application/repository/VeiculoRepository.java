@@ -8,6 +8,6 @@ import br.com.tinnova.cadastroautomovel.veiculo.domain.Veiculo;
 public interface VeiculoRepository {
 	Veiculo salva(Veiculo veiculo);
 	List<Veiculo> buscaTodosVeiculos();
-	Veiculo buscaVeiculoAtravesId(UUID idVeiculos);
+	Veiculo buscaVeiculoAtravesId(UUID idVeiculo);
 
 }
