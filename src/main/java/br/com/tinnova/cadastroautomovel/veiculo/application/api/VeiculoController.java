@@ -66,4 +66,11 @@ public class VeiculoController implements VeiculoAPI {
 		log.info("[finaliza] VeiculoController - pathAlteraVeiculo");
 		
 	}
+
+	@Override
+	public List<VeiculoListParametro> getParametro() {
+		log.info("[inicia] VeiculoController - getParametro");
+		log.info("[finaliza] VeiculoController - getParametro");
+		return null;
+	}
 }

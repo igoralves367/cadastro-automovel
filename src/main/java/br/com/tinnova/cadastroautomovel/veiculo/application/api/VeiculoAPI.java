@@ -45,4 +45,8 @@ public interface VeiculoAPI {
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	void pathAlteraVeiculo(@PathVariable UUID idVeiculo, 
 			@Valid @RequestBody VeiculoAlteraRequest veiculoAlteraRequest);
+	
+	@GetMapping(value = "/{marca}/{ano}/{cor}")
+	@ResponseStatus(code = HttpStatus.OK)
+	List<VeiculoListParametro> getParametro();
 } 
