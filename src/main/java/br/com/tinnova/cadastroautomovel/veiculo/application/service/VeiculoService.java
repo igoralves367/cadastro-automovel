@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import javax.validation.Valid;
 
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteraRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteracaoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoDetalhadoResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListResponse;
@@ -17,4 +18,5 @@ public interface VeiculoService {
 	VeiculoDetalhadoResponse buscaVeiculoAtravesId(UUID idVeiculo);
 	void deletaVeiculoAtravesId(UUID idVeiculo);
 	void putAlteraVeiculo(UUID idVeiculo, VeiculoAlteracaoRequest veiculoAlteracaoRequest);
+	void pathAlteraVeiculo(UUID idVeiculo, VeiculoAlteraRequest veiculoAlteraRequest);
 }
