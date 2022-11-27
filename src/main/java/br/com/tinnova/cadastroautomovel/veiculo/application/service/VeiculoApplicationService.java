@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteraRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteracaoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoDetalhadoResponse;
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListParametro;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoResponse;
@@ -76,5 +77,12 @@ public class VeiculoApplicationService implements VeiculoService {
 		veiculoRepository.salva(veiculo);
 		log.info("[finaliza] VeiculoApplicationService - pathAlteraVeiculo");
 		
+	}
+
+	@Override
+	public List<VeiculoListParametro> buscaVeiculoParametro() {
+		log.info("[inicia] VeiculoApplicationService - buscaVeiculoParametro");
+		log.info("[finaliza] VeiculoApplicationService - buscaVeiculoParametro");
+		return null;
 	}
 }

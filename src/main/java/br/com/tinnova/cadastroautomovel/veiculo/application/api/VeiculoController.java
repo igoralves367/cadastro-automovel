@@ -70,7 +70,8 @@ public class VeiculoController implements VeiculoAPI {
 	@Override
 	public List<VeiculoListParametro> getParametro() {
 		log.info("[inicia] VeiculoController - getParametro");
+		List<VeiculoListParametro> parametro = veiculoService.buscaVeiculoParametro();
 		log.info("[finaliza] VeiculoController - getParametro");
-		return null;
+		return parametro;
 	}
 }

@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteraRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteracaoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoDetalhadoResponse;
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListParametro;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoListResponse;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoResponse;
@@ -19,4 +20,5 @@ public interface VeiculoService {
 	void deletaVeiculoAtravesId(UUID idVeiculo);
 	void putAlteraVeiculo(UUID idVeiculo, VeiculoAlteracaoRequest veiculoAlteracaoRequest);
 	void pathAlteraVeiculo(UUID idVeiculo, VeiculoAlteraRequest veiculoAlteraRequest);
+	List<VeiculoListParametro> buscaVeiculoParametro();
 }
