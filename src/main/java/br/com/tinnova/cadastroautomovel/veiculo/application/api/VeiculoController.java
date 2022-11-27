@@ -57,4 +57,12 @@ public class VeiculoController implements VeiculoAPI {
 		log.info("[finaliza] VeiculoController - putAlteraVeiculo");
 		
 	}
+
+	@Override
+	public void pathAlteraVeiculo(UUID idVeiculo, @Valid VeiculoAlteraRequest veiculoAlteraRequest) {
+		log.info("[inicia] VeiculoController - pathAlteraVeiculo");
+		log.info("{idVeiculo} {}", idVeiculo);
+		log.info("[finaliza] VeiculoController - pathAlteraVeiculo");
+		
+	}
 }
