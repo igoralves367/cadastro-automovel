@@ -53,6 +53,7 @@ public class VeiculoController implements VeiculoAPI {
 	public void patchAlteraVeiculo(UUID idVeiculo, @Valid VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
 		log.info("[inicia] VeiculoController - patchAlteraVeiculo");
 		log.info("{idVeiculo} {}", idVeiculo);
+		veiculoService.pathAlteraVeiculo(idVeiculo, veiculoAlteracaoRequest);
 		log.info("[finaliza] VeiculoController - patchAlteraVeiculo");
 		
 	}
