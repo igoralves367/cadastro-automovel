@@ -52,8 +52,8 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	@Override
 	public List<Veiculo> buscaVeiculoParametro() {
 		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoParametro");
-		//List<Veiculo> todosVeiculos = veiculoSpringDataJPARepository.findAll();
+		List<Veiculo> veiculoParametro = veiculoSpringDataJPARepository.findAll();
 		log.info("[finaliza] VeiculoInfraRepository - buscaVeiculoParametro");
-		return null;
+		return veiculoParametro;
 	}
 }

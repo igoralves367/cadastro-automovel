@@ -1,6 +1,7 @@
 package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import br.com.tinnova.cadastroautomovel.veiculo.domain.Veiculo;
 import lombok.Value;
@@ -13,7 +14,14 @@ public class VeiculoListParametro {
 	
 	
 	public static List<VeiculoListParametro> converte(List<Veiculo> veiculo) {
-		// TODO Auto-generated method stub
-		return null;
+		return veiculo.stream()
+				.map(VeiculoListParametro::new)
+				.collect(Collectors.toList());
 	}
+
+	public VeiculoListParametro(Veiculo veiculo) {
+		this.marca = veiculo.getMarca();
+		this.cor = veiculo.getCor();
+		this.ano = veiculo.getAno();
+	}	
 }
