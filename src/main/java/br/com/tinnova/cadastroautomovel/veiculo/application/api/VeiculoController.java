@@ -50,11 +50,11 @@ public class VeiculoController implements VeiculoAPI {
 	}
 
 	@Override
-	public void patchAlteraVeiculo(UUID idVeiculo, @Valid VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
-		log.info("[inicia] VeiculoController - patchAlteraVeiculo");
+	public void putAlteraVeiculo(UUID idVeiculo, @Valid VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
+		log.info("[inicia] VeiculoController - putAlteraVeiculo");
 		log.info("{idVeiculo} {}", idVeiculo);
-		veiculoService.pathAlteraVeiculo(idVeiculo, veiculoAlteracaoRequest);
-		log.info("[finaliza] VeiculoController - patchAlteraVeiculo");
+		veiculoService.putAlteraVeiculo(idVeiculo, veiculoAlteracaoRequest);
+		log.info("[finaliza] VeiculoController - putAlteraVeiculo");
 		
 	}
 }
