@@ -82,7 +82,8 @@ public class VeiculoApplicationService implements VeiculoService {
 	@Override
 	public List<VeiculoListParametro> buscaVeiculoParametro() {
 		log.info("[inicia] VeiculoApplicationService - buscaVeiculoParametro");
+		List<Veiculo> veiculo = veiculoRepository.buscaVeiculoParametro();
 		log.info("[finaliza] VeiculoApplicationService - buscaVeiculoParametro");
-		return null;
+		return VeiculoListParametro.converte(veiculo);
 	}
 }

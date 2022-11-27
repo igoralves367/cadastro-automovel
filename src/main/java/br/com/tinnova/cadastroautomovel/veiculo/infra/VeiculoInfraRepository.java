@@ -48,4 +48,12 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 		veiculoSpringDataJPARepository.delete(veiculo);
 		log.info("[finaliza] VeiculoInfraRepository - deletaVeiculo");		
 	}
+
+	@Override
+	public List<Veiculo> buscaVeiculoParametro() {
+		log.info("[inicia] VeiculoInfraRepository - buscaVeiculoParametro");
+		//List<Veiculo> todosVeiculos = veiculoSpringDataJPARepository.findAll();
+		log.info("[finaliza] VeiculoInfraRepository - buscaVeiculoParametro");
+		return null;
+	}
 }
