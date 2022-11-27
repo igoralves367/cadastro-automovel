@@ -58,9 +58,11 @@ public class VeiculoApplicationService implements VeiculoService {
 	}
 
 	@Override
-	public void pathAlteraVeiculo(UUID idVeiculo, @Valid VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
+	public void pathAlteraVeiculo(UUID idVeiculo, VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
 		log.info("[inicia] VeiculoApplicationService - pathAlteraVeiculo");
 		Veiculo veiculo = veiculoRepository.buscaVeiculoAtravesId(idVeiculo);
+		veiculo.altera(veiculoAlteracaoRequest);
+		veiculoRepository.salva(veiculo);
 		log.info("[finaliza] VeiculoApplicationService - pathAlteraVeiculo");
 		
 	}

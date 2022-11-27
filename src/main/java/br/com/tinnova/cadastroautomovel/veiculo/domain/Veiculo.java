@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteracaoRequest;
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -49,5 +50,17 @@ public class Veiculo {
 		this.vendido = veiculoRequest.getVendido();
 		this.created = LocalDateTime.now();
 		this.updated = LocalDateTime.now();
-	}	
+	}
+
+	public void altera(VeiculoAlteracaoRequest veiculoAlteracaoRequest) {
+		this.veiculo = veiculoAlteracaoRequest.getVeiculo();
+		this.marca = veiculoAlteracaoRequest.getMarca();
+		this.cor = veiculoAlteracaoRequest.getCor();
+		this.ano = veiculoAlteracaoRequest.getAno();
+		this.descricao = veiculoAlteracaoRequest.getDescricao();
+		this.vendido = veiculoAlteracaoRequest.getVendido();
+		this.created = LocalDateTime.now();
+		this.updated = LocalDateTime.now();
+		
+	}
 }
