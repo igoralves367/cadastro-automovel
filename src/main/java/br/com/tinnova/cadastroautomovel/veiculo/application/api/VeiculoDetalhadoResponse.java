@@ -2,6 +2,7 @@ package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 
 import java.util.UUID;
 
+import br.com.tinnova.cadastroautomovel.veiculo.domain.Marca;
 import br.com.tinnova.cadastroautomovel.veiculo.domain.Veiculo;
 import lombok.Value;
 @Value
@@ -9,7 +10,7 @@ public class VeiculoDetalhadoResponse {
 	
 	private UUID idVeiculo;
 	private String veiculo;
-	private String marca;
+	private Marca marca;
 	private String cor;
 	private Integer ano;
 	private String descricao;

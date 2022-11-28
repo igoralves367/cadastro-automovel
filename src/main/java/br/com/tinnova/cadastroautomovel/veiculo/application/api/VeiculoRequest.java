@@ -3,14 +3,14 @@ package br.com.tinnova.cadastroautomovel.veiculo.application.api;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import br.com.tinnova.cadastroautomovel.veiculo.domain.Marca;
 import lombok.Value;
 
 @Value
 public class VeiculoRequest {
 	@NotBlank
 	private String veiculo;
-	@NotBlank
-	private String marca;
+	private Marca marca;
 	@NotBlank
 	private String cor;
 	@NotNull

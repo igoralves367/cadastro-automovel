@@ -4,13 +4,14 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import br.com.tinnova.cadastroautomovel.veiculo.domain.Marca;
 import br.com.tinnova.cadastroautomovel.veiculo.domain.Veiculo;
 import lombok.Value;
 @Value
 public class VeiculoListResponse {
 	private UUID idVeiculo;
 	private String veiculo;
-	private String marca;
+	private Marca marca;
 	private String cor;
 	private Integer ano;
 	private String descricao;
