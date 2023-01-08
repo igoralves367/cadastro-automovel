@@ -25,5 +25,4 @@ public class VeiculoDetalhadoResponse {
 		this.descricao = veiculo2.getDescricao();
 		this.vendido = veiculo2.getVendido();
 	}
-
 }

@@ -1,4 +1,4 @@
-package br.com.tinnova.cadastroautomovel.veiculo.application.repository;
+ package br.com.tinnova.cadastroautomovel.veiculo.application.repository;
 
 import java.util.List;
 import java.util.UUID;

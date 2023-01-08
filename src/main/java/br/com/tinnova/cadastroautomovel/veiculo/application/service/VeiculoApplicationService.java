@@ -3,8 +3,6 @@ package br.com.tinnova.cadastroautomovel.veiculo.application.service;
 import java.util.List;
 import java.util.UUID;
 
-import javax.validation.Valid;
-
 import org.springframework.stereotype.Service;
 
 import br.com.tinnova.cadastroautomovel.veiculo.application.api.VeiculoAlteraRequest;
@@ -26,7 +24,7 @@ public class VeiculoApplicationService implements VeiculoService {
 	private final VeiculoRepository veiculoRepository;
 
 	@Override
-	public VeiculoResponse criaVeiculo(@Valid VeiculoRequest veiculoRequest) {
+	public VeiculoResponse criaVeiculo(VeiculoRequest veiculoRequest) {
 		log.info("[inicia] VeiculoApplicationService - criaVeiculo");
 		Veiculo veiculo = veiculoRepository.salva( new Veiculo(veiculoRequest));
 		log.info("[finaliza] VeiculoApplicationService - criaVeiculo");
